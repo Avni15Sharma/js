@@ -8,11 +8,13 @@ if (true) {
 }
 
 
-
 // console.log(a);
 // console.log(b);
 // console.log(c);
 
+//var-> global scope
+//const, let-> block scope
+//nested blocks:inner block can access outer block's variables ,converse is not true
 
 function one(){
     const username = "hitesh"

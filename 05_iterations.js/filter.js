@@ -67,7 +67,7 @@ nums=[2,3,4,5,6,7,7,9,1]
 // let greaternums=nums.filter((item)=>(item>5))
 let greaternums=nums.filter((item)=>item>5)
 // console.log(greaternums)
-//so filter function applies the passed function on each element of the arr and returns an array of the elements that satisfy that codition
+//so filter applies the passed function on each element of the arr and returns an array of the elements that satisfy that condition
 
 //how we can do the same thing using for each:
 // but prefer filter

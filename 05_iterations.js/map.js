@@ -40,3 +40,4 @@ orders=[
 // })
 let change=orders.filter((item)=>(item.price>500)).map((item)=>(item.price+=1000))
 console.log(change)
+//map applies the passed function on each element of the arr and returns an arr of result

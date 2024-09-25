@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM Manipulation </title>
+</head>
+<body style="background-color: black ;color: white">
+    <div>
+        <ul class="parent">
+            <li class="game">Call of Duty</li>
+            <li class="game">Valorant</li>
+            <li class="game">Fortnite</li>
+        </ul>
+    </div>    
+</body>
+<script>
+const parent=document.querySelector(".parent") //selection using class
+console.log(parent) 
+console.log(parent.children) //gives htmlCollection of children
+console.log(parent.childNodes) //gives NodeList of children
+// NodeList also takes into account the line breaks as text node
+
+for(let i=0;i< parent.children.length;i++){
+    // console.log(parent.children[i]) ///we can use a for loop to traverse over htmlCollection
+}
+
+parent.children[1].innerHTML //we can access htmlCollection elements using indexes 
+parent.children[1].style.color="gold"
+console.log("first",parent.firstElementChild) //we can access child using parent reference
+console.log("last",parent.lastElementChild)
+
+const childCOD=parent.firstElementChild
+console.log("parent",childCOD.parentElement) //we can access parent using child reference
+
+const COD=document.querySelector(".game")
+console.log(COD)
+console.log(COD.parentElement)
+console.log(COD.nextElementSibling) //we can access siblings
+console.log("nodes:",parent.childNodes)
+
+</script>
+</html>

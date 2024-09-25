@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM| edit and remove elements</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div>
+        <ul class="lang"> Languages
+            <li>Javascript</li>
+        </ul>
+    </div>
+</body>
+<script>
+// we can make functions to create and add elements
+function addLang(langName){
+    const list=document.querySelector("ul");
+    const newLang=document.createElement("li")
+    newLang.innerHTML=`${langName}`
+    list.appendChild(newLang)
+}
+// addLang("python")
+// addLang("CSS")
+function addPara(lang,col){
+    const para =document.createElement("p")
+    const text=document.createTextNode("i'm the para")
+    para.appendChild(text)
+    para.style.color=`${col}`
+    document.body.appendChild(para)
+}
+// addOptionalLang("React","gold")
+
+function addChild(parent,child,content){
+    const p=document.querySelector(`${parent}`)
+    const c=document.createElement(`${child}`)
+    c.innerHTML=`${content}`
+    p.appendChild(c)
+}
+// addChild("ul","li","Tailwind CSS")
+
+//edit
+const newli=document.createElement("li")
+newli.innerHTML="Java"
+// langList=document.getElementsByClassName("lang")[0]
+// langList
+third=document.querySelector("li:nth-child(3)")
+// third.replaceWith(newli) //css changed to java
+
+//edit
+const first=document.querySelector("li:first-child")
+// first.outerHTML=`Kotlin`
+first.outerHTML=`<li>Kotlin<li>` 
+
+//remove
+const last=document.querySelector("li:last-child")
+last.remove()
+// document.querySelector("li:last-child")
+</script>
+</html>

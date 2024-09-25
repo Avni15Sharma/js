@@ -41,11 +41,11 @@ function addChild(parent,child,content){
 
 //edit
 const newli=document.createElement("li")
-newli.innerHTML="Java"
+// newli.innerHTML="Java"  //prefer replaceWith over this way
 // langList=document.getElementsByClassName("lang")[0]
 // langList
 third=document.querySelector("li:nth-child(3)")
-// third.replaceWith(newli) //css changed to java
+third.replaceWith(newli) //css changed to java
 
 //edit
 const first=document.querySelector("li:first-child")

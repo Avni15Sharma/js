@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval and clearInterval</title>
+</head>
+<body>
+    <h1>Zomato</h1>
+    <button id="start" style="height: 25px ;width: 50px;">start</button>
+    <button id="stop" style="height: 25px ;width: 50px;">stop</button>
+</body>
+<script>
+    const changeMe=function(){
+        document.querySelector("h1").innerHTML="blink it"
+        console.log("changed")
+    }
+    const changeH1=function(){
+        const h1=document.querySelector("h1")
+        const pnew=document.createElement("p")
+        const text=document.createTextNode("new")
+        pnew.appendChild(text)
+        document.body.appendChild(pnew)
+        console.log("added")
+    }
+    let change
+    document.getElementById("start").addEventListener("click",function(){
+        change=setInterval(changeH1,2000)
+    })
+    
+    document.getElementById("stop").addEventListener("click",function(){
+        clearInterval(change)
+    })
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    const intervalId = setInterval(sayDate, 1000, "hi")
+    clearInterval(intervalId)
+</script>
+</html>
